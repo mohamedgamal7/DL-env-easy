@@ -18,7 +18,6 @@ RAM: 16GB
 ## OS
 Any linux distro that is deep learning compatible can be used. you can also use windows but the installation is a little bit trickier. This guide contains steps to setup `Ubuntu 20.04` for deep learning.
 
-############image ubuntu############ 
 
 **Installing Ubuntu 20.04**:
 
@@ -40,7 +39,7 @@ steps:
 
 6- Go to the boot menu in your device and choose the usb drive .
 
-7- ollow the install instructions by the prompt windows. this may help [link](https://www.youtube.com/watch?v=G7ffzC4S0A4)
+7- follow the install instructions by the prompt windows. this may help [link](https://www.youtube.com/watch?v=G7ffzC4S0A4)
 
 ----------------------------------------------------------------------------------------------------
 
@@ -50,13 +49,22 @@ steps:
 
 1- From your applications menu search for software and updates
 
+![alt text](https://github.com/mohamedgamal7/DL-env-easy/blob/main/pics/Screenshot%20from%202021-08-16%2005-27-51.png)
+
+![alt text](https://github.com/mohamedgamal7/DL-env-easy/blob/main/pics/Screenshot%20from%202021-08-16%2005-28-25.png)
+
 2- select the additional drivers tab 
+
+![alt text](https://github.com/mohamedgamal7/DL-env-easy/blob/main/pics/Screenshot%20from%202021-08-16%2005-28-47.png)
+
 
 3- I chose nvidia-460 driver and the rest of this guide is based on it (you can choose other drivers but you have to choose other compatible CUDA toolkit and cuDNN ). click apply changes .
 
 4- click ctrl+alt+T to open terminal and type `reboot` to restart your system 
 
 5- click ctrl+alt+T to open terminal  and type `nvidia-smi` to check driver install you should expect something like this 
+
+![alt text](https://github.com/mohamedgamal7/DL-env-easy/blob/main/pics/Screenshot%20from%202021-08-16%2005-34-36.png)
 
 ----------------------------------------------------------------------------------------------------
 
@@ -90,6 +98,8 @@ nvcc -V
 ```
 you should expect something like this 
 
+![alt text](https://github.com/mohamedgamal7/DL-env-easy/blob/main/pics/Screenshot%20from%202021-08-16%2005-46-58.png)
+
 ----------------------------------------------------------------------------------------------------
 
 ## cuDNN 8.1
@@ -98,9 +108,15 @@ steps :
 
 1-To download cuDNN you need to have a nvidia developer account which is easy to make. Then fill their 2-min survey and agree to the terms and conditions and choose archived versions
 
+![alt text](https://github.com/mohamedgamal7/DL-env-easy/blob/main/pics/Screenshot%20from%202021-08-16%2005-52-36.png)
+
 2- I tried the debian installation and it worked (you can try other installations too) for debian installations download runtime,developer and samples library as shown here 
 
+![alt text](https://github.com/mohamedgamal7/DL-env-easy/blob/main/pics/Screenshot%20from%202021-08-16%2006-00-38.png)
+
+
 3- open terminal and type the following commands :
+
 
     sudo apt-get install libfreeimage3 libfreeimage-dev
 then
@@ -147,6 +163,10 @@ Procedure
    If cuDNN is properly installed and running on your Linux system, you will see a message similar to the following:
 
     Test passed!
+    
+    
+   ![alt text](https://github.com/mohamedgamal7/DL-env-easy/blob/main/pics/Screenshot%20from%202021-08-16%2006-09-51.png)
+
 ----------------------------------------------------------------------------------------------------
 By far the hardest part should have passed the rest is the easy stuff.
 
